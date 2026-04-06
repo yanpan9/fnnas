@@ -426,10 +426,10 @@ jobs:
           [[ "${?}" -ne "0" ]] && echo "Error: Download failed." && exit 1
 
           # Create directory symlinks for packaging
-          mkdir -p "${{ github.workspace }}/fnnas"
-          mkdir -p "/home/runner/work/_actions/${OWNER,,}/fnnas/main"
+          # mkdir -p "${{ github.workspace }}/fnnas"
+          # mkdir -p "/home/runner/work/_actions/${OWNER,,}/fnnas/main"
           ln -sf /builder/fnnas ${{ github.workspace }}/fnnas
-          ln -sf /builder/fnnas "/home/runner/work/_actions/${OWNER,,}/fnnas/main/fnnas"
+          ln -sf /builder/fnnas "/home/runner/work/_actions/ophub/fnnas/main/fnnas"
 
           echo "build_tag=${build_tag}" >> ${GITHUB_ENV}
           echo "status=success" >> ${GITHUB_OUTPUT}
