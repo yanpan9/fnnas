@@ -235,6 +235,7 @@ on:
         type: choice
         options:
           - ophub/fnnas
+          - yanpan9/fnnas
       fnnas_kernel:
         description: "Select fnnas kernel version"
         required: false
